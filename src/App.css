@@ -9,19 +9,62 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    /* animation: App-logo-spin infinite 20s linear; */
   }
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.favorites {
+  align-self: flex-start;
+  /* padding: 0 1rem; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.wanna {
+  align-self: flex-start;
+}
+
+.favorites ul {
+  display: flex;
+}
+
+.favorites li {
+  margin: 1rem;
+}
+
+.favorites img {
+  max-width: 40px;
+}
+
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: white; */
+}
+
+header {
+  background-color: #E50914;
   color: white;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-weight: 700;
 }
 
 .App-link {
@@ -35,4 +78,106 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  /* padding: 1rem; */
+}
+
+h3 {
+  /* margin: 0; */
+}
+
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+}
+
+.movie {
+  display: flex;
+  /* flex-direction: column; */
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  /* max-width: 600px; */
+}
+
+.image {
+  position: relative;
+
+  flex: 1;
+
+  /* border-radius: 5%; */
+  /* border: 1px solid gray; */
+  /* padding: 2rem; */
+  min-width: 250px;
+  max-width: 350px;
+
+  margin: 1rem;
+}
+
+/* .movie image {
+  position: relative;
+} */
+
+.movie img {
+  flex: 1;
+  width: 100%;
+
+  object-fit: contain;
+}
+
+.movie button {
+  /* border: 1px solid white; */
+  outline: none;
+  opacity: 0.7;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: none;
+
+  padding: 1rem;
+  font-size: 3rem;
+
+  cursor: pointer;
+}
+
+.movie button:hover {
+  opacity: 1;
+}
+
+.movie button.nope {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+
+  background: red;
+}
+
+.movie button.yup {
+  position: absolute;
+  top: 40%;
+  right: 10%;
+
+  background: green;
+}
+
+.movie .description {
+  /* font-size: 1rem; */
+
+  max-width: 500px;
+
+  text-align: left;
 }
